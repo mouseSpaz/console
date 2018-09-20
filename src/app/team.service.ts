@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { MessageService } from './message.service';
 import { Team } from './Team';
 
@@ -21,6 +22,10 @@ export class TeamService {
 
   getTeams(): Observable<Team[]> {
     this.messageService.add('HeroService: fetched heroes');
-    return this.http.get<Team[]>(this.teamsUrl)
+    return this.http.get<Team[]>(this.teamsUrl).pipe(
+      map((response: Response) => {
+        return response.data;
+      }
+    ));
   }
 }

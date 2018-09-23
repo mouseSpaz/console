@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DataSource } from '@angular/cdk/collections';
 import { Observable } from 'rxjs';
 
-import { TeamService } from '../../team.service';
-import { MessageService } from '../../message.service';
+import { TeamService } from '../../services/team.service';
+import { MessageService } from '../../services/message.service';
 import { Team } from '../../Team';
 
 @Component({

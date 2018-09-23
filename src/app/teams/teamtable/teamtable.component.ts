@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 import { TeamService } from '../../services/team.service';
 import { MessageService } from '../../services/message.service';
-import { Team } from '../../Team';
+import { Team } from '../../models/Team';
 
 @Component({
   selector: 'app-teamtable',
@@ -26,7 +26,7 @@ export class TeamDataSource extends DataSource<any> {
     super();
   }
   connect(): Observable<Team[]> {
-    return this.teamService.getTeams()
+    return this.teamService.getTeams();
   }
   disconnect() {}
 }

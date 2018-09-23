@@ -14,13 +14,15 @@ import { LoginComponent } from './login/login.component';
 import { MessagesComponent } from './messages/messages.component';
 import { RoutesModule } from './routes.module';
 import { TeamtableComponent } from './teams/teamtable/teamtable.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
+    LoginComponent,
     MessagesComponent,
     TeamtableComponent,
-    LoginComponent
   ],
   imports: [
     // Angular
@@ -36,7 +38,7 @@ import { TeamtableComponent } from './teams/teamtable/teamtable.component';
 
     // MATERIAL 2
     MatInputModule,
-    MatCardModule
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

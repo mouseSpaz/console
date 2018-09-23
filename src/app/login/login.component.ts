@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
       .subscribe(user => {
         setTimeout(() => {
           if (this.authenticationService.isLoggedIn) {
-            const redirect = this.authenticationService.redirectUrl ? this.authenticationService.redirectUrl : '/home';
+            const redirect = this.authenticationService.redirectUrl ? this.authenticationService.redirectUrl : '/dashboard';
             this.processingSubmission = false;
             this.router.navigate([redirect]);
           }

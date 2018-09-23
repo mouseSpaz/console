@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  apiHostname: "mousespaz.engine",
+  apiBaseUrl: 'http://mousespaz.engine',
   production: false
 };
 

@@ -7,7 +7,6 @@ import { MatButtonModule, MatCheckboxModule, MatButton, MatCheckbox, MatTableMod
 import { AppComponent } from './app.component';
 import { TeamsComponent } from './teams/teams.component';
 import { MessagesComponent } from './messages/messages.component';
-import { UsertableComponent } from './tables/usertable/usertable.component';
 import { TeamtableComponent } from './tables/teamtable/teamtable.component';
 
 @NgModule({

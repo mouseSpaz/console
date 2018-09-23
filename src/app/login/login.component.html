@@ -1,0 +1,38 @@
+<section>
+  <mat-card>
+    <form [formGroup]="form" [class.submitting]="submitting">
+      <fieldset>
+        <legend>Login</legend>
+
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            placeholder="email"
+            formControlName="email"
+            required>
+          <mat-error *ngIf="form.get('email').invalid">{{ getErrorMessage('email') }}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="password"
+            formControlName="password"
+            type="password"
+            required>
+          <mat-error *ngIf="form.get('password').invalid">{{ getErrorMessage('password') }}</mat-error>
+        </mat-form-field>
+
+        <mat-error *ngIf="error">{{ error }}</mat-error>
+
+      </fieldset>
+
+      <div class="form-buttons">
+        <button mat-raised-button color="primary" (click)="attemptLogin()">Login</button>
+        <button mat-button color="primary">Reset Password</button>
+      </div>
+
+    </form>
+  </mat-card>
+</section>

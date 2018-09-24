@@ -1,33 +1,44 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule, MatButton, MatCheckbox, MatTableModule } from '@angular/material';
+
 // FORMS
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // MATERIAL2
 import { MatInputModule, MatCardModule } from '@angular/material';
 // SPAZBOT
 import { AppComponent } from './app.component';
-import { RoutesModule } from './routes.module';
 import { LoginComponent } from './login/login.component';
+import { MessagesComponent } from './messages/messages.component';
+import { RoutesModule } from './routes.module';
+import { TeamtableComponent } from './teams/teamtable/teamtable.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    DashboardComponent,
+    LoginComponent,
+    MessagesComponent,
+    TeamtableComponent,
   ],
   imports: [
     // Angular
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatTableModule,
     HttpClientModule,
+    FormsModule,
     ReactiveFormsModule,
     RoutesModule,
 
     // MATERIAL 2
     MatInputModule,
-    MatCardModule
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

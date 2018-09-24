@@ -51,8 +51,8 @@ export class AuthenticationService {
     if (!this.user) {
       return this.api.get<User>('/myself')
         .pipe(
-          map((response: HttpResponse<User>) => {
-            return this.user = new User(response.body);
+          map((response: HttpResponse<any>) => {
+            return this.user = new User(response.body.data);
           })
         );
     } else {

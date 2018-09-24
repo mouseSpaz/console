@@ -27,6 +27,14 @@ export class AuthenticationService {
     private api: ApiService,
     private rest: RestService) { }
 
+  can(grant: string): Observable<boolean> | boolean {
+    if (!this.user) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
   login(email: string, password: string): Observable<void> {
     const url = `${environment.apiBaseUrl}/auth`;
     const data = {

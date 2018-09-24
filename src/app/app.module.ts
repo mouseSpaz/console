@@ -15,6 +15,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { RoutesModule } from './routes.module';
 import { TeamtableComponent } from './teams/teamtable/teamtable.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthenticationGuard } from './services/authentication.guard.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatInputModule,
     MatCardModule,
   ],
-  providers: [],
+  providers: [
+    AuthenticationGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class SpazConsoleAppModule { }

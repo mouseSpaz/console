@@ -10,12 +10,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule, MatCardModule } from '@angular/material';
 // SPAZBOT
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import { MessagesComponent } from './messages/messages.component';
 import { RoutesModule } from './routes.module';
 import { TeamtableComponent } from './teams/teamtable/teamtable.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthenticationGuard } from './services/authentication.guard.service';
+import { TokenRequestComponent } from './auth/token-request/token-request.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AuthenticationGuard } from './services/authentication.guard.service';
     LoginComponent,
     MessagesComponent,
     TeamtableComponent,
+    TokenRequestComponent,
   ],
   imports: [
     // Angular

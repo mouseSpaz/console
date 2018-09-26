@@ -72,6 +72,35 @@ export class AuthenticationService {
     localStorage.removeItem('token');
   }
 
+  requestResetPasswordToken(email: string): Observable<void> {
+    const url = `${environment.apiBaseUrl}/auth/password_reset`;
+    const data = {
+      email: email,
+    };
+    return this.http.post(url, data).pipe(
+      map(message => {
+          console.log(message);
+      }),
+      catchError(this.handleError)
+    );
+  }
+
+  resetPassword(email: string, password: string, password_confirmation: string, token: string): Observable<void> {
+    const url = `${environment.apiBaseUrl}/auth/password_reset/${token}`;
+    const data = {
+      email: email,
+      password: password,
+      password_confirmation: password_confirmation,
+      token: token
+    };
+    return this.http.post(url, data).pipe(
+      map(message => {
+          console.log(message);
+      }),
+      catchError(this.handleError)
+    );
+  }
+
   private handleError(error: HttpErrorResponse) {
     console.error(
       `Server returned ${error.status}, ` +

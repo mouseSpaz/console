@@ -17,6 +17,7 @@ import { TeamtableComponent } from './teams/teamtable/teamtable.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthenticationGuard } from './services/authentication.guard.service';
 import { TokenRequestComponent } from './auth/token-request/token-request.component';
+import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { TokenRequestComponent } from './auth/token-request/token-request.compon
     MessagesComponent,
     TeamtableComponent,
     TokenRequestComponent,
+    ResetPasswordComponent,
   ],
   imports: [
     // Angular

@@ -1,3 +1,14 @@
-<p>
-  token-request works!
-</p>
+<form [formGroup]="form" (ngSubmit)="attemptRequestToken()">
+  <mat-form-field class="form-control">
+    <input 
+      matInput
+      type="email"
+      placeholder="Email Address"
+      formControlName="email"
+      required>
+  </mat-form-field>
+  <button 
+    mat-button
+    type="submit"
+    [disabled]="!form.valid">Reset Password</button>
+</form>
